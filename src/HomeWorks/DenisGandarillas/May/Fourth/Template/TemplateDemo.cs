@@ -1,7 +1,7 @@
 namespace HomeWorks.DenisGandarillas.May.Fourth.Template
 {
 
-  public class Demo
+  public class TemplateDemo
   {
 
     public void run()
@@ -30,6 +30,7 @@ namespace HomeWorks.DenisGandarillas.May.Fourth.Template
         if (option == "5")
         {
           run = false;
+          continue;
         }
         else if (option == "1")
         {

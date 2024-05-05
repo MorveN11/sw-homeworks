@@ -1,7 +1,7 @@
 namespace HomeWorks.DenisGandarillas.May.Fourth.Strategy
 {
 
-  public class Demo
+  public class StrategyDemo
   {
 
     public void run()
