@@ -1,12 +1,9 @@
-namespace HomeWorks.ManuelMorales.May.Fourth.Strategy
+public class MultiplyMathematicStrategy : IMathematicStrategy
 {
-    public class MultiplyMathematicStrategy : IMathematicStrategy
-    {
-        public MultiplyMathematicStrategy() { }
+    public MultiplyMathematicStrategy() { }
 
-        public int Operate(int a, int b)
-        {
-            return a * b;
-        }
+    public int Operate(int a, int b)
+    {
+        return a * b;
     }
 }
