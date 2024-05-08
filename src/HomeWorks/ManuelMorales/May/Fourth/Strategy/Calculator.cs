@@ -1,29 +1,26 @@
-namespace HomeWorks.ManuelMorales.May.Fourth.Strategy
+public class Calculator
 {
-    public class Calculator
+    private IMathematicStrategy? _strategy;
+
+    public Calculator() { }
+
+    public Calculator(IMathematicStrategy strategy)
     {
-        private IMathematicStrategy _strategy;
+        _strategy = strategy;
+    }
 
-        public Calculator() { }
+    public void SetStrategy(IMathematicStrategy strategy)
+    {
+        _strategy = strategy;
+    }
 
-        public Calculator(IMathematicStrategy strategy)
+    public int Calculate(int a, int b)
+    {
+        if (_strategy == null)
         {
-            _strategy = strategy;
+            throw new System.Exception("Strategy not defined");
         }
 
-        public void SetStrategy(IMathematicStrategy strategy)
-        {
-            _strategy = strategy;
-        }
-
-        public int Calculate(int a, int b)
-        {
-            if (_strategy == null)
-            {
-                throw new System.Exception("Strategy not defined");
-            }
-
-            return _strategy.Operate(a, b);
-        }
+        return _strategy.Operate(a, b);
     }
 }

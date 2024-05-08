@@ -1,33 +1,30 @@
-namespace HomeWorks.ManuelMorales.May.Fourth.TemplateMethod
+public abstract class CommaSeparatedValuesTemplate
 {
-    public abstract class CommaSeparatedValuesTemplate
+    private readonly string _csv;
+
+    protected CommaSeparatedValuesTemplate(String str)
     {
-        private readonly string _str;
+        _csv = OperateStr(str);
+    }
 
-        protected CommaSeparatedValuesTemplate(String str)
-        {
-            this._str = OperateStr(str);
-        }
+    public String Csv => _csv;
 
-        public String GetStr() => this._str;
+    private string OperateStr(String str)
+    {
+        string[] array = StrToArray(str);
+        array = Operate(array);
+        return ArrayToStr(array);
+    }
 
-        private string OperateStr(String str)
-        {
-            string[] array = StrToArray(str);
-            array = Operate(array);
-            return ArrayToStr(array);
-        }
+    protected string[] StrToArray(string str)
+    {
+        return str.Split(",");
+    }
 
-        protected string[] StrToArray(string str)
-        {
-            return str.Split(",");
-        }
+    protected abstract string[] Operate(string[] array);
 
-        protected abstract string[] Operate(string[] array);
-
-        protected string ArrayToStr(string[] array)
-        {
-            return string.Join(",", array);
-        }
+    protected string ArrayToStr(string[] array)
+    {
+        return string.Join(",", array);
     }
 }
