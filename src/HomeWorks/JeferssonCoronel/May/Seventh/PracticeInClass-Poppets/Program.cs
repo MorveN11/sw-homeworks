@@ -1,4 +1,5 @@
-namespace HomeWorks.JeffersonCoronel.May.Seven.PracticeInClass {
+namespace HomeWorks.JeffersonCoronel.May.Seventh.PracticeInClass-Poppets
+{
     interface IActions {
         void Move();
         void Communicate();
