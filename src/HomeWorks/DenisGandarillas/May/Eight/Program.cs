@@ -1,4 +1,5 @@
 using src.HomeWorks.DenisGandarillas.May.Eight.AbstractFactory;
+using src.HomeWorks.DenisGandarillas.May.Eight.ChainOfResponsability;
 
 namespace src.HomeWorks.DenisGandarillas.May.Eight
 {
@@ -15,7 +16,7 @@ namespace src.HomeWorks.DenisGandarillas.May.Eight
         Console.Clear();
         Console.WriteLine("Welcome to the DENIS GANDARILLAS' program :D");
 
-        Console.WriteLine("Options:\n1. Abstract Factory\n2. ...\n3. Exit");
+        Console.WriteLine("Options:\n1. Abstract Factory\n2. Chain of Responsability\n3. Exit");
 
         string option = "";
 
@@ -39,7 +40,8 @@ namespace src.HomeWorks.DenisGandarillas.May.Eight
         else if (option == "2")
         {
           Console.Clear();
-          Console.WriteLine("C R");
+          CORDemo cORDemo = new CORDemo();
+          cORDemo.Run();
         }
         else
         {
