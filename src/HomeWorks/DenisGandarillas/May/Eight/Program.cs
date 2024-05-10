@@ -1,3 +1,5 @@
+using src.HomeWorks.DenisGandarillas.May.Eight.AbstractFactory;
+
 namespace src.HomeWorks.DenisGandarillas.May.Eight
 {
   public class Program
@@ -30,15 +32,14 @@ namespace src.HomeWorks.DenisGandarillas.May.Eight
         }
         else if (option == "1")
         {
-          Console.Clear();
-          AbstractFactory abstractFactory = new AbstractFactory();
+          AFDemo aFDemo = new AFDemo();
+
+          aFDemo.Run();
         }
         else if (option == "2")
         {
           Console.Clear();
-          FactoryMethod factory = new FactoryMethod();
-
-          factory.run();
+          Console.WriteLine("C R");
         }
         else
         {

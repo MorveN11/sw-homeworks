@@ -6,7 +6,7 @@ namespace src.HomeWorks.DenisGandarillas.May.Eight.AbstractFactory
 
     public ICar CreateCar()
     {
-      return new Suzuki();
+      return new SuzukiCar();
     }
 
   }
