@@ -49,8 +49,10 @@ namespace HomeWorks.JeferssonCoronel.May.Eleventh.SingletonDesignPattern
             Console.WriteLine("AppLanguage: " + configManager.GetConfigValue("AppLanguage"));
             Console.WriteLine("AppTheme: " + configManager.GetConfigValue("AppTheme") + "\n");
 
-            // This is other variable but has the same instance so their variables have the same values
+            // This is other variable but has the same instance so their variables have the same values, and you can change them.
             var configManagerNewVariable = ConfigurationManager.GetInstance();
+            configManagerNewVariable.SetConfigValue("AppLanguage", "Spanish");
+
             Console.WriteLine("AppLanguage: " + configManagerNewVariable.GetConfigValue("AppLanguage"));
             Console.WriteLine("AppTheme: " + configManagerNewVariable.GetConfigValue("AppTheme"));
         }
