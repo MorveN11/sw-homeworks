@@ -1,0 +1,35 @@
+# Título principal
+
+## Subtítulo
+
+Este es un párrafo en Markdown. Puedes **enfatizar** palabras usando asteriscos o guiones bajos, *cursivas* con un solo asterisco o guion bajo, y ***ambas*** con tres asteriscos o guiones bajos. También puedes ~~tachar~~ palabras usando dobles virgulillas.
+
+### Listas
+
+#### Lista desordenada:
+- Elemento 1
+- Elemento 2
+  - Elemento 2.1
+  - Elemento 2.2
+
+#### Lista ordenada:
+1. Primero
+2. Segundo
+3. Tercero
+4. Primero
+
+### Citas
+
+> Esto es una cita.
+
+### Enlaces e imágenes
+
+[Enlace a Google](https://www.google.com)
+
+![Logo de Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png)
+
+### Código
+
+```python
+def saludar():
+    print("¡Hola, mundo!")
