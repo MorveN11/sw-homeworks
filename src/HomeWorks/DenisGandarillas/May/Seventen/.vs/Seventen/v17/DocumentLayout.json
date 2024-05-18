@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\progression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\progression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\fibonaziprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\fibonaziprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\fibonazi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\fibonazi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\iprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\iprogression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\may\\seventen\\seventen\\ipivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{520D08AE-73AE-4BC9-9C3F-2BAC93D0ED4B}|Seventen\\Seventen.csproj|solutionrelative:seventen\\ipivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FibonaziProgression.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\FibonaziProgression.cs",
+              "RelativeDocumentMoniker": "Seventen\\FibonaziProgression.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\FibonaziProgression.cs",
+              "RelativeToolTip": "Seventen\\FibonaziProgression.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:58:00.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Progression.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Progression.cs",
+              "RelativeDocumentMoniker": "Seventen\\Progression.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Progression.cs",
+              "RelativeToolTip": "Seventen\\Progression.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:55:48.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProgression.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\IProgression.cs",
+              "RelativeDocumentMoniker": "Seventen\\IProgression.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\IProgression.cs",
+              "RelativeToolTip": "Seventen\\IProgression.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:55:07.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Fibonazi.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Fibonazi.cs",
+              "RelativeDocumentMoniker": "Seventen\\Fibonazi.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Fibonazi.cs",
+              "RelativeToolTip": "Seventen\\Fibonazi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:49:45.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Program.cs",
+              "RelativeDocumentMoniker": "Seventen\\Program.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\Program.cs",
+              "RelativeToolTip": "Seventen\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:48:19.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPivot.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\IPivot.cs",
+              "RelativeDocumentMoniker": "Seventen\\IPivot.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\May\\Seventen\\Seventen\\IPivot.cs",
+              "RelativeToolTip": "Seventen\\IPivot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T02:49:00.497Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
