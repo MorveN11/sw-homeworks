@@ -15,6 +15,8 @@ namespace _25may24.Maps
             builder.Property(p => p.Name);
             builder.Property(p => p.Lastname);
             builder.Property(p => p.Birthday);
+            builder.HasMany(p => p.Studies).WithOne(s => s.Student).HasForeignKey(x => x.IdStudent);
+            builder.HasMany(p => p.Candidates).WithOne(c => c.Student).HasForeignKey(x => x.IdStudent);
 
         }
     }
