@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Student List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table id="studentsTable" class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: '/api/student',
+            type: 'GET',
+            success: function(data) {
+                var tableBody = $('#studentsTable tbody');
+                tableBody.empty();
+                data.forEach(function(student) {
+                    var row = '<tr>' +
+                        '<td>' + student.name + '</td>' +
+                        '<td>' + student.lastname + '</td>' +
+                        '<td>' + new Date(student.birthday).toLocaleDateString() + '</td>' +
+                        '</tr>';
+                    tableBody.append(row);
+                });
+            }
+        });
+    });
+</script>
