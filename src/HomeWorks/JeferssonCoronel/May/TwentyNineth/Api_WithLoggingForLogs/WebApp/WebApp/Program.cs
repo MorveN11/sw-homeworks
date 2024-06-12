@@ -1,7 +1,12 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using WebApp.Business;
+using WebApp.Business.Validator.Concretes;
 using WebApp.Context;
 using WebApp.Core.Handler;
+using WebApp.Repositories.Concrets;
+using WebApp.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,8 +26,23 @@ builder.Services.AddControllers(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Ingresar repos
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ICareerRepository, CareerRepository>();
+
+// Ingresar mediadores
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(UniversityProfile).Assembly));
+builder.Services.AddAutoMapper(typeof(UniversityProfile).Assembly);
+
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<StudentValidator>();
+builder.Services.AddTransient<CareerValidator>();
+
 builder.Services.AddDbContext<MyDBContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 

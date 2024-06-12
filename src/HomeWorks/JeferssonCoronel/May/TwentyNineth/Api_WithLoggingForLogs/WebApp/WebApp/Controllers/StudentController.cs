@@ -1,60 +1,121 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.ComponentModel.DataAnnotations;
+using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Project.Business.DTOs.Student;
+using Project.Business.Students;
+using WebApp.Business.Validator.Concretes;
 using WebApp.Context;
-using WebApp.Core.Excepciones.Business;
-using WebApp.Core.Handler;
 using WebApp.Entity;
 
-namespace WebApp.Controllers
+[ApiController]
+[Route("Project.Api/[controller]")]
+public class StudentController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class StudentController : ControllerBase
+    private readonly IMediator _mediator;
+    private readonly IMapper _mapper;
+    private readonly StudentValidator _studentValidator;
+    private readonly MyDBContext _dbContext;
+
+    public StudentController(MyDBContext dbContext, IMediator mediator, IMapper mapper, StudentValidator studentValidator)
     {
-        private MyDBContext _dbContext;
+        _dbContext = dbContext;
+        _mediator = mediator;
+        _mapper = mapper;
+        _studentValidator = studentValidator;
+    }
 
-        private readonly LogHandler _logHandler;
+    [HttpGet]
+    public async Task<IActionResult> GetStudents()
+    {
+        var students = await _dbContext.Students.ToListAsync();
+        return Ok(students);
+    }
 
-        public StudentController(MyDBContext dbContext, LogHandler logHandler)
+    /*public async Task<IActionResult> GetStudents()
+    {
+        var i = 0;
+        var j = 0;
+        var x = i / j;
+        // throw new TestException();
+        var response = new List<Student>
         {
-            _dbContext = dbContext;
-            _logHandler = logHandler;
-        }
-
-        [HttpGet]
-       public async Task<IActionResult> GetStudents()
-        {
-            //var i = 0;
-            //var j = 0;
-            //var x = i / j;
-            //throw new TestException();
-
-            try
+            new Student
             {
-                // Simular una situación que provoque la excepción
-                throw new BusinessException("Hubo un error al obtener la lista de estudiantes.", _logHandler);
+                Name = "Gustavo",
+                LastName = "Gonzales",
+                BirthDate = new DateTime(2003, 01, 01),
+                Id = Guid.NewGuid()
             }
-            catch (BusinessException ex)
-            {
-                ex.LogMessage(); // Registra la excepción
-                return StatusCode(500, "Se produjo un error en el servidor."); // Devuelve un código de estado 500
-            }
+        };
+        return Ok(response);
+    }*/
 
-            var response = new List<Student> 
-            {
-                new Student
-                {
-                    Name = "Andre",
-                    LastName = "Perez",
-                    Birthdate = new DateTime(2003, 12, 10),
-                    Id = Guid.NewGuid()
-                }
-            };
-            return Ok(response);
-        }
+    [HttpGet("{studentId}")]
+    public async Task<IActionResult> GetStudentById([Required] Guid studentId)
+    {
+        var contract = new GetStudentByIdRequest(studentId);
 
+        var student = await _mediator.Send(contract);
+        return Ok(student);
+    }
 
-       // [HttpGet]
-       // public IEnumerable<Student> GetStudents() => _dbContext.Students.ToList();
+    [HttpPost("CareerCode")]
+    public async Task<IActionResult> RegisterStudentToCareer([Required] Student student, [Required] string careerCode)
+    {
 
     }
+
+
+    [HttpGet(), Route("Careers/{studentId}")]
+    public async Task<IActionResult> GetStudentCarers([Required] Guid studentId)
+    {
+        var contract = new GetStudentCareerRequest(studentId);
+
+        var model = await _mediator.Send(contract);
+        var careers = _mapper.Map<IList<CareerDTO>>(model);
+        return Ok(careers);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Post([FromBody] Student studentDTO)
+    {
+        var validationResult = await _studentValidator.ValidateAsync(studentDTO);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
+        var student = _mapper.Map<Student>(studentDTO);
+        var command = new CreateStudentRequest(student);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+
+    [HttpPut("{studentId}")]
+    public async Task<IActionResult> Put([Required] Guid studentId, [FromBody] Student studentDTO)
+    {
+        var validationResult = await _studentValidator.ValidateAsync(studentDTO);
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
+        var student = _mapper.Map<Student>(studentDTO);
+        var command = new UpdateStudentRequest(student);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
+
+    [HttpDelete("{studentId}")]
+    public async Task<IActionResult> Delete([Required] Guid studentId)
+    {
+        var command = new DeleteStudentRequest(studentId);
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
+
 }

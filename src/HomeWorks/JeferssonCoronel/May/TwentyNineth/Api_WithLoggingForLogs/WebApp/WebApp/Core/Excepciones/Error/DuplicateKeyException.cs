@@ -1,13 +1,13 @@
 ﻿using WebApp.Core.Handler;
 
-namespace WebApp.Core.Excepciones.Critical
+namespace WebApp.Core.Excepciones.Error
 {
-    public class CriticalException : AbstractException
+    public class DuplicateKeyException : AbstractException
     {
         private readonly LogHandler _logHandler;
 
-        public CriticalException(Exception exception, LogHandler logHandler) :
-            base(exception, "Something wrong happened. Please contact to our system administratoraaaaa", Severity.ERROR)
+        public DuplicateKeyException(Exception exception, LogHandler logHandler)
+            : base(exception, "A entity with the same ID already exists.", Severity.ERROR)
         {
             _logHandler = logHandler;
         }

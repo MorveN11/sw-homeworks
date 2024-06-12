@@ -7,7 +7,6 @@ namespace WebApp.Context
     {
         public DbSet<Student> Students { get; set; }
         public DbSet<Career> Careers { get; set; }
-        public DbSet<StudentCareer> StudentCareers { get; set; }
 
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options)
         {
@@ -16,8 +15,14 @@ namespace WebApp.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("public");
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Student>()
+                .HasMany(s => s.Careers)
+                .WithMany(c => c.Students)
+                .UsingEntity<Dictionary<string, object>>(
+                    "CareerStudent",
+                    j => j.HasOne<Career>().WithMany().HasForeignKey("CareersId"),
+                    j => j.HasOne<Student>().WithMany().HasForeignKey("StudentsId")
+                );
         }
     }
 }

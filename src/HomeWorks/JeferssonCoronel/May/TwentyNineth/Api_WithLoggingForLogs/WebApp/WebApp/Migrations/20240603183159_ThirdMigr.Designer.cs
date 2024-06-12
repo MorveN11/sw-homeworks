@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WebApp.Context;
@@ -11,12 +12,15 @@ using WebApp.Context;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    partial class MyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240603183159_ThirdMigr")]
+    partial class ThirdMigr
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("public")
                 .HasAnnotation("ProductVersion", "8.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
@@ -34,7 +38,7 @@ namespace WebApp.Migrations
 
                     b.HasIndex("StudentsId");
 
-                    b.ToTable("CareerStudent");
+                    b.ToTable("CareerStudent", "public");
                 });
 
             modelBuilder.Entity("WebApp.Entity.Career", b =>
@@ -53,7 +57,7 @@ namespace WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Careers");
+                    b.ToTable("Careers", "public");
                 });
 
             modelBuilder.Entity("WebApp.Entity.Student", b =>
@@ -75,7 +79,7 @@ namespace WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", "public");
                 });
 
             modelBuilder.Entity("CareerStudent", b =>
