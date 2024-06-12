@@ -20,9 +20,10 @@ namespace WebApp.Repositories.Concrets
             return await context.SaveChangesAsync();
         }
 
-        public Task<int> Update(T entity)
+        public async Task<int> Update(T entity)
         {
-            throw new NotImplementedException();
+            context.Set<T>().Update(entity);
+            return await context.SaveChangesAsync();
         }
 
         public async Task<int> Delete(T entity)

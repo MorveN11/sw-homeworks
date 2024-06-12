@@ -1,0 +1,98 @@
+2024-06-03 11:49:14.625 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-03 11:49:15.730 -04:00 [INF] Now listening on: https://localhost:7002
+2024-06-03 11:49:15.733 -04:00 [INF] Now listening on: http://localhost:5054
+2024-06-03 11:49:15.740 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-03 11:49:15.744 -04:00 [INF] Hosting environment: Development
+2024-06-03 11:49:15.747 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-06-03 11:49:16.685 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-06-03 11:49:17.241 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 562.4336ms
+2024-06-03 11:49:17.250 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger-ui.css - null null
+2024-06-03 11:49:17.250 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger-ui-bundle.js - null null
+2024-06-03 11:49:17.249 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-03 11:49:17.249 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger-ui-standalone-preset.js - null null
+2024-06-03 11:49:17.272 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-06-03 11:49:17.294 -04:00 [INF] The file /swagger-ui.css was not modified
+2024-06-03 11:49:17.294 -04:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-06-03 11:49:17.299 -04:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-06-03 11:49:17.310 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 61.3733ms
+2024-06-03 11:49:17.311 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger-ui.css - 304 null text/css 62.5477ms
+2024-06-03 11:49:17.312 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger-ui-bundle.js - 304 null text/javascript 61.6714ms
+2024-06-03 11:49:17.313 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger-ui-standalone-preset.js - 304 null text/javascript 64.1522ms
+2024-06-03 11:49:17.427 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 157.0828ms
+2024-06-03 11:49:18.223 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-06-03 11:49:18.487 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 264.3286ms
+2024-06-03 13:08:29.767 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-03 13:08:30.045 -04:00 [INF] Now listening on: https://localhost:7002
+2024-06-03 13:08:30.048 -04:00 [INF] Now listening on: http://localhost:5054
+2024-06-03 13:08:30.052 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-03 13:08:30.053 -04:00 [INF] Hosting environment: Development
+2024-06-03 13:08:30.054 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-06-03 13:08:30.770 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-06-03 13:08:31.089 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 323.6532ms
+2024-06-03 13:08:31.093 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-03 13:08:31.102 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-06-03 13:08:31.109 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 15.3237ms
+2024-06-03 13:08:31.166 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.5792ms
+2024-06-03 13:08:32.432 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-06-03 13:08:32.628 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.2988ms
+2024-06-03 14:33:03.761 -04:00 [INF] Executed DbCommand (109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-03 14:33:03.844 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-06-03 14:33:03.878 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-03 14:33:03.902 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-03 14:33:03.904 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-06-03 14:33:03.926 -04:00 [INF] Applying migration '20240603183159_ThirdMigr'.
+2024-06-03 14:33:04.046 -04:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE public."StudentCareers";
+2024-06-03 14:33:04.049 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE public."Students" RENAME COLUMN "Birthdate" TO "BirthDate";
+2024-06-03 14:33:04.069 -04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE public."CareerStudent" (
+    "CareersId" uuid NOT NULL,
+    "StudentsId" uuid NOT NULL,
+    CONSTRAINT "PK_CareerStudent" PRIMARY KEY ("CareersId", "StudentsId"),
+    CONSTRAINT "FK_CareerStudent_Careers_CareersId" FOREIGN KEY ("CareersId") REFERENCES public."Careers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_CareerStudent_Students_StudentsId" FOREIGN KEY ("StudentsId") REFERENCES public."Students" ("Id") ON DELETE CASCADE
+);
+2024-06-03 14:33:04.075 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CareerStudent_StudentsId" ON public."CareerStudent" ("StudentsId");
+2024-06-03 14:33:04.077 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240603183159_ThirdMigr', '8.0.5');
+2024-06-03 14:34:30.271 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-03 14:34:30.747 -04:00 [INF] Now listening on: https://localhost:7002
+2024-06-03 14:34:30.749 -04:00 [INF] Now listening on: http://localhost:5054
+2024-06-03 14:34:30.753 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-03 14:34:30.761 -04:00 [INF] Hosting environment: Development
+2024-06-03 14:34:30.773 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-06-03 14:34:31.137 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-06-03 14:34:31.579 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 448.7399ms
+2024-06-03 14:34:31.594 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-03 14:34:31.594 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-06-03 14:34:31.606 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 12.8019ms
+2024-06-03 14:34:31.655 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.3814ms
+2024-06-03 14:34:32.079 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-06-03 14:34:32.280 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.5762ms

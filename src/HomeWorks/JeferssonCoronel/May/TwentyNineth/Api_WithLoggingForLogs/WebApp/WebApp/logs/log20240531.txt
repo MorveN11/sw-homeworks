@@ -1,0 +1,94 @@
+2024-05-31 09:31:27.603 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-31 09:31:27.924 -04:00 [INF] Now listening on: https://localhost:7002
+2024-05-31 09:31:27.926 -04:00 [INF] Now listening on: http://localhost:5054
+2024-05-31 09:31:27.930 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-31 09:31:27.932 -04:00 [INF] Hosting environment: Development
+2024-05-31 09:31:27.935 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-05-31 09:31:28.952 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-05-31 09:31:29.169 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 222.2498ms
+2024-05-31 09:31:29.182 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-31 09:31:29.184 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-05-31 09:31:29.209 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 23.5712ms
+2024-05-31 09:31:29.255 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.2997ms
+2024-05-31 09:31:29.514 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-05-31 09:31:29.648 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.9206ms
+2024-05-31 09:31:35.348 -04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7002/api/Student/b5e5569c-6f5d-4d7f-9d7c-3bc7e7d9b505 - null null
+2024-05-31 09:31:35.376 -04:00 [INF] Executing endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:31:35.417 -04:00 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Guid) on controller WebApp.Controllers.StudentController (WebApp).
+2024-05-31 09:31:35.664 -04:00 [ERR] The method or operation is not implemented.
+2024-05-31 09:31:35.691 -04:00 [ERR]    at WebApp.Controllers.StudentController.Delete(Guid studentId) in C:\Users\jefer\source\repos\WebApp\WebApp\Controllers\StudentController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2024-05-31 09:31:35.700 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-05-31 09:31:35.709 -04:00 [INF] Executed action WebApp.Controllers.StudentController.Delete (WebApp) in 284.48ms
+2024-05-31 09:31:35.711 -04:00 [INF] Executed endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:31:35.714 -04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7002/api/Student/b5e5569c-6f5d-4d7f-9d7c-3bc7e7d9b505 - 200 null text/plain; charset=utf-8 366.2377ms
+2024-05-31 09:33:39.906 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-31 09:33:40.569 -04:00 [INF] Now listening on: https://localhost:7002
+2024-05-31 09:33:40.571 -04:00 [INF] Now listening on: http://localhost:5054
+2024-05-31 09:33:40.575 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-31 09:33:40.577 -04:00 [INF] Hosting environment: Development
+2024-05-31 09:33:40.578 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-05-31 09:33:41.213 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-05-31 09:33:41.515 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 308.0413ms
+2024-05-31 09:33:41.628 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-05-31 09:33:41.628 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-31 09:33:41.655 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 28.8488ms
+2024-05-31 09:33:41.722 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 94.7454ms
+2024-05-31 09:33:41.969 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-05-31 09:33:42.126 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.1751ms
+2024-05-31 09:34:05.213 -04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - null null
+2024-05-31 09:34:05.255 -04:00 [INF] Executing endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:34:05.297 -04:00 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Guid) on controller WebApp.Controllers.StudentController (WebApp).
+2024-05-31 09:34:07.534 -04:00 [INF] Executed DbCommand (106ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."Birthdate", s."LastName", s."Name"
+FROM public."Students" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2024-05-31 09:34:07.750 -04:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM public."Students"
+WHERE "Id" = @p0;
+2024-05-31 09:34:07.775 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-31 09:34:07.784 -04:00 [INF] Executed action WebApp.Controllers.StudentController.Delete (WebApp) in 2481.1397ms
+2024-05-31 09:34:07.786 -04:00 [INF] Executed endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:34:07.794 -04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - 200 null text/plain; charset=utf-8 2580.9987ms
+2024-05-31 09:34:24.370 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - null null
+2024-05-31 09:34:24.376 -04:00 [INF] Executing endpoint 'WebApp.Controllers.StudentController.GetStudentById (WebApp)'
+2024-05-31 09:34:24.385 -04:00 [INF] Route matched with {action = "GetStudentById", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentById(System.Guid) on controller WebApp.Controllers.StudentController (WebApp).
+2024-05-31 09:34:24.460 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."Birthdate", s."LastName", s."Name"
+FROM public."Students" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2024-05-31 09:34:24.465 -04:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-05-31 09:34:24.467 -04:00 [INF] Executed action WebApp.Controllers.StudentController.GetStudentById (WebApp) in 77.6491ms
+2024-05-31 09:34:24.469 -04:00 [INF] Executed endpoint 'WebApp.Controllers.StudentController.GetStudentById (WebApp)'
+2024-05-31 09:34:24.470 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - 204 null null 100.619ms
+2024-05-31 09:34:32.120 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - null null
+2024-05-31 09:34:32.127 -04:00 [INF] Executing endpoint 'WebApp.Controllers.StudentController.GetStudentById (WebApp)'
+2024-05-31 09:34:32.129 -04:00 [INF] Route matched with {action = "GetStudentById", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStudentById(System.Guid) on controller WebApp.Controllers.StudentController (WebApp).
+2024-05-31 09:34:32.151 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."Birthdate", s."LastName", s."Name"
+FROM public."Students" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2024-05-31 09:34:32.155 -04:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2024-05-31 09:34:32.156 -04:00 [INF] Executed action WebApp.Controllers.StudentController.GetStudentById (WebApp) in 23.8744ms
+2024-05-31 09:34:32.158 -04:00 [INF] Executed endpoint 'WebApp.Controllers.StudentController.GetStudentById (WebApp)'
+2024-05-31 09:34:32.159 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/api/Student/d2e1243c-0a1f-4a3a-bc5d-0dd1f4d7b272 - 204 null null 39.2902ms
+2024-05-31 09:35:33.179 -04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7002/api/Student/e1a729ec-1d36-4c5f-a0d9-0f9b6ed7a671 - null null
+2024-05-31 09:35:33.185 -04:00 [INF] Executing endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:35:33.187 -04:00 [INF] Route matched with {action = "Delete", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.Guid) on controller WebApp.Controllers.StudentController (WebApp).
+2024-05-31 09:35:33.195 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."Birthdate", s."LastName", s."Name"
+FROM public."Students" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2024-05-31 09:35:33.208 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM public."Students"
+WHERE "Id" = @p0;
+2024-05-31 09:35:33.214 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-05-31 09:35:33.216 -04:00 [INF] Executed action WebApp.Controllers.StudentController.Delete (WebApp) in 26.8978ms
+2024-05-31 09:35:33.218 -04:00 [INF] Executed endpoint 'WebApp.Controllers.StudentController.Delete (WebApp)'
+2024-05-31 09:35:33.219 -04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7002/api/Student/e1a729ec-1d36-4c5f-a0d9-0f9b6ed7a671 - 200 null text/plain; charset=utf-8 78.4483ms

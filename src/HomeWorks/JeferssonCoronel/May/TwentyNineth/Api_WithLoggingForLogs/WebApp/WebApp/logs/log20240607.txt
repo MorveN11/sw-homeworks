@@ -1,0 +1,120 @@
+2024-06-07 06:38:33.091 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-07 06:38:33.350 -04:00 [INF] Now listening on: https://localhost:7002
+2024-06-07 06:38:33.353 -04:00 [INF] Now listening on: http://localhost:5054
+2024-06-07 06:38:33.357 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-07 06:38:33.358 -04:00 [INF] Hosting environment: Development
+2024-06-07 06:38:33.359 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-06-07 06:38:33.936 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-06-07 06:38:34.159 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 228.6599ms
+2024-06-07 06:38:34.176 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-07 06:38:34.176 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-06-07 06:38:34.186 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 9.886ms
+2024-06-07 06:38:34.239 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.5784ms
+2024-06-07 06:38:34.595 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-06-07 06:38:34.856 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 261.1405ms
+2024-06-07 06:39:01.560 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/Project.Api/Career/careers/f7c8de7b-9d7c-4a4b-8641-efecbbd5252d - null null
+2024-06-07 06:39:01.594 -04:00 [INF] Executing endpoint 'WebApp.Controllers.CareerController.GetCareerStudents (WebApp)'
+2024-06-07 06:39:01.625 -04:00 [INF] Route matched with {action = "GetCareerStudents", controller = "Career"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCareerStudents(System.Guid) on controller WebApp.Controllers.CareerController (WebApp).
+2024-06-07 06:39:03.375 -04:00 [INF] Executed DbCommand (83ms) [Parameters=[@__careerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Code", t."Name", t0."CareersId", t0."StudentsId", t0."Id", t0."BirthDate", t0."LastName", t0."Name"
+FROM (
+    SELECT c."Id", c."Code", c."Name"
+    FROM public."Careers" AS c
+    WHERE c."Id" = @__careerId_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT c0."CareersId", c0."StudentsId", s."Id", s."BirthDate", s."LastName", s."Name"
+    FROM public."CareerStudent" AS c0
+    INNER JOIN public."Students" AS s ON c0."StudentsId" = s."Id"
+) AS t0 ON t."Id" = t0."CareersId"
+ORDER BY t."Id", t0."CareersId", t0."StudentsId"
+2024-06-07 06:39:03.646 -04:00 [ERR] Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[WebApp.Entity.Student, WebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[Project.Business.DTOs.Student.CareerDTO, WebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2024-06-07 06:39:03.682 -04:00 [ERR]    at lambda_method96(Closure, Object, IList`1, ResolutionContext)
+   at WebApp.Controllers.CareerController.GetCareerStudents(Guid careerId) in C:\Users\jefer\source\repos\WebApp\WebApp\Controllers\CareerController.cs:line 53
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2024-06-07 06:39:03.685 -04:00 [ERR] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Student -> CareerDTO
+WebApp.Entity.Student -> Project.Business.DTOs.Student.CareerDTO
+2024-06-07 06:39:03.687 -04:00 [ERR]    at lambda_method97(Closure, Student, CareerDTO, ResolutionContext)
+   at lambda_method96(Closure, Object, IList`1, ResolutionContext)
+2024-06-07 06:39:03.695 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-06-07 06:39:03.704 -04:00 [INF] Executed action WebApp.Controllers.CareerController.GetCareerStudents (WebApp) in 2072.1945ms
+2024-06-07 06:39:03.707 -04:00 [INF] Executed endpoint 'WebApp.Controllers.CareerController.GetCareerStudents (WebApp)'
+2024-06-07 06:39:03.715 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/Project.Api/Career/careers/f7c8de7b-9d7c-4a4b-8641-efecbbd5252d - 200 null text/plain; charset=utf-8 2155.0067ms
+2024-06-07 06:44:09.205 -04:00 [INF] User profile is available. Using 'C:\Users\jefer\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-07 06:44:09.474 -04:00 [INF] Now listening on: https://localhost:7002
+2024-06-07 06:44:09.477 -04:00 [INF] Now listening on: http://localhost:5054
+2024-06-07 06:44:09.480 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-07 06:44:09.482 -04:00 [INF] Hosting environment: Development
+2024-06-07 06:44:09.483 -04:00 [INF] Content root path: C:\Users\jefer\source\repos\WebApp\WebApp
+2024-06-07 06:44:10.217 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/index.html - null null
+2024-06-07 06:44:10.441 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/index.html - 200 null text/html;charset=utf-8 229.9701ms
+2024-06-07 06:44:10.452 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-07 06:44:10.452 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/_vs/browserLink - null null
+2024-06-07 06:44:10.459 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_framework/aspnetcore-browser-refresh.js - 200 13748 application/javascript; charset=utf-8 7.2936ms
+2024-06-07 06:44:10.504 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.7667ms
+2024-06-07 06:44:10.829 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - null null
+2024-06-07 06:44:10.985 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 156.1322ms
+2024-06-07 06:44:32.576 -04:00 [INF] Request starting HTTP/2 GET https://localhost:7002/Project.Api/Career/Students/f7c8de7b-9d7c-4a4b-8641-efecbbd5252d - null null
+2024-06-07 06:44:32.602 -04:00 [INF] Executing endpoint 'WebApp.Controllers.CareerController.GetCareerStudents (WebApp)'
+2024-06-07 06:44:32.634 -04:00 [INF] Route matched with {action = "GetCareerStudents", controller = "Career"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCareerStudents(System.Guid) on controller WebApp.Controllers.CareerController (WebApp).
+2024-06-07 06:44:34.404 -04:00 [INF] Executed DbCommand (75ms) [Parameters=[@__careerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Code", t."Name", t0."CareersId", t0."StudentsId", t0."Id", t0."BirthDate", t0."LastName", t0."Name"
+FROM (
+    SELECT c."Id", c."Code", c."Name"
+    FROM public."Careers" AS c
+    WHERE c."Id" = @__careerId_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT c0."CareersId", c0."StudentsId", s."Id", s."BirthDate", s."LastName", s."Name"
+    FROM public."CareerStudent" AS c0
+    INNER JOIN public."Students" AS s ON c0."StudentsId" = s."Id"
+) AS t0 ON t."Id" = t0."CareersId"
+ORDER BY t."Id", t0."CareersId", t0."StudentsId"
+2024-06-07 06:44:34.574 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Project.Business.DTOs.Student.StudentDTO, WebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-07 06:44:34.673 -04:00 [INF] Executed action WebApp.Controllers.CareerController.GetCareerStudents (WebApp) in 2031.9092ms
+2024-06-07 06:44:34.676 -04:00 [INF] Executed endpoint 'WebApp.Controllers.CareerController.GetCareerStudents (WebApp)'
+2024-06-07 06:44:34.683 -04:00 [INF] Request finished HTTP/2 GET https://localhost:7002/Project.Api/Career/Students/f7c8de7b-9d7c-4a4b-8641-efecbbd5252d - 200 361 application/json; charset=utf-8 2112.6719ms
+2024-06-07 06:55:22.477 -04:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-07 06:55:22.536 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-06-07 06:55:22.558 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-07 06:55:22.574 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-06-07 06:55:22.575 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-06-07 06:55:22.585 -04:00 [INF] Applying migration '20240607105500_SecondMigr'.
+2024-06-07 06:55:22.609 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240607105500_SecondMigr', '8.0.5');
