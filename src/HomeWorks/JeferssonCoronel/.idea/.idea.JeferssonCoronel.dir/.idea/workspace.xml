@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bcc7ef90-b02f-474c-b61d-466a26aff241" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/May/Fourth/Strategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Fourth/Template.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Nineth/AbstractFactoryDesignPattern/AbstractFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Nineth/ChainResponsibilityDesignPattern/ChainResponsibility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Seventh/PracticeInClass-Poppets/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Seventh/Task-BuilderAndFactoryMethodDesignPatterns/Builder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Seventh/Task-BuilderAndFactoryMethodDesignPatterns/Factory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/May/Tenth/DecoratorDesignPattern/Decorator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2g4HxlnBpLfTDNxa56VtbfIyLrL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jeferssonlv/RiderProjects/PracticeInClass2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/jeferssonlv/.config/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/home/jeferssonlv/.config/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/home/jeferssonlv/.local/share/Symbols/src&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcc7ef90-b02f-474c-b61d-466a26aff241" name="Changes" comment="" />
+      <created>1714950179678</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714950179678</updated>
+      <workItem from="1714950180000" duration="7894000" />
+      <workItem from="1714995425043" duration="7269000" />
+      <workItem from="1715088722022" duration="844000" />
+      <workItem from="1715126187800" duration="1998000" />
+      <workItem from="1715132099075" duration="4675000" />
+      <workItem from="1715175582934" duration="3243000" />
+      <workItem from="1715298741758" duration="8287000" />
+      <workItem from="1715311810386" duration="712000" />
+      <workItem from="1715485156394" duration="7175000" />
+      <workItem from="1715657019934" duration="613000" />
+      <workItem from="1715745165669" duration="6419000" />
+      <workItem from="1715773222499" duration="2750000" />
+      <workItem from="1715905842017" duration="1000" />
+      <workItem from="1715919078991" duration="928000" />
+      <workItem from="1715920448914" duration="1740000" />
+      <workItem from="1715947187537" duration="694000" />
+      <workItem from="1715948365433" duration="3170000" />
+      <workItem from="1715996093300" duration="1573000" />
+      <workItem from="1716423852690" duration="1764000" />
+      <workItem from="1716431805774" duration="636000" />
+      <workItem from="1716523338108" duration="3502000" />
+      <workItem from="1716551181331" duration="2038000" />
+      <workItem from="1716834741897" duration="52000" />
+      <workItem from="1717166047921" duration="34000" />
+      <workItem from="1718169930115" duration="185000" />
+      <workItem from="1718214072875" duration="416000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: Adding project using template Design Pattern">
+      <option name="closed" value="true" />
+      <created>1714951995099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714951995099</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Adding the same project using strategy Design Pattern">
+      <option name="closed" value="true" />
+      <created>1714952919157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714952919157</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Adding diagrams">
+      <option name="closed" value="true" />
+      <created>1714957567940</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714957567940</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix: Syntax error related with the rename of path that I put into description of files">
+      <option name="closed" value="true" />
+      <created>1715312025145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715312025145</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: Adding project using template Design Pattern" />
+    <MESSAGE value="feat: Adding the same project using strategy Design Pattern" />
+    <MESSAGE value="feat: Adding diagrams" />
+    <MESSAGE value="fix: Syntax error related with the rename of path that I put into description of files" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Syntax error related with the rename of path that I put into description of files" />
+  </component>
+</project>
