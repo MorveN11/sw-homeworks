@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculator\\calculator\\src\\operations\\concretes\\substraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|solutionrelative:calculator\\src\\operations\\concretes\\substraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{559AB76B-52E1-4061-84F8-34538EE5DB1E}|CalculatorTests\\CalculatorTests.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculator\\calculatortests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{559AB76B-52E1-4061-84F8-34538EE5DB1E}|CalculatorTests\\CalculatorTests.csproj|solutionrelative:calculatortests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculator\\calculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|solutionrelative:calculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculator\\calculator\\src\\operations\\concretes\\squareroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9BD666F-45CA-41DC-BD91-552A189C5523}|Calculator\\Calculator.csproj|solutionrelative:calculator\\src\\operations\\concretes\\squareroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Substraction.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\src\\Operations\\Concretes\\Substraction.cs",
+              "RelativeDocumentMoniker": "Calculator\\src\\Operations\\Concretes\\Substraction.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\src\\Operations\\Concretes\\Substraction.cs",
+              "RelativeToolTip": "Calculator\\src\\Operations\\Concretes\\Substraction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T02:19:49.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SquareRoot.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\src\\Operations\\Concretes\\SquareRoot.cs",
+              "RelativeDocumentMoniker": "Calculator\\src\\Operations\\Concretes\\SquareRoot.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\src\\Operations\\Concretes\\SquareRoot.cs",
+              "RelativeToolTip": "Calculator\\src\\Operations\\Concretes\\SquareRoot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T02:16:32.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\Program.cs",
+              "RelativeDocumentMoniker": "Calculator\\Program.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\Calculator\\Program.cs",
+              "RelativeToolTip": "Calculator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T02:15:09.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\CalculatorTests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "CalculatorTests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\Calculator\\CalculatorTests\\UnitTest1.cs",
+              "RelativeToolTip": "CalculatorTests\\UnitTest1.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T02:04:18.165Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
