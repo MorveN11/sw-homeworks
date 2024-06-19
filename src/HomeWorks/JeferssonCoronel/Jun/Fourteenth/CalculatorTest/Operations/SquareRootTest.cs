@@ -39,6 +39,6 @@ public class SquareRootTest
         var squareRoot = new SquareRoot();
         var symbol = squareRoot.GetSymbol();
 
-        Assert.Equal("|/", symbol);
+        Assert.Equal("√", symbol);
     }
 }
