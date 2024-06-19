@@ -6,7 +6,7 @@ public class SquareRoot : ISingleOperandOperation
 {
     public string GetSymbol()
     {
-        return "|/";
+        return "√";
     }
 
     public double Operate(double a)
