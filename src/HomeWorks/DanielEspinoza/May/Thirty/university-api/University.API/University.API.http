@@ -1,0 +1,15 @@
+@API_HostAddress = http://localhost:5093
+
+GET {{API_HostAddress}}/api/student
+Accept: application/json
+
+###
+
+POST {{API_HostAddress}}/api/student
+Content-Type: application/json
+Accept: application/json
+{
+    "Name": "John",
+    "LastName": "Doe",
+    "BirthDate": "2022-05-18T00:00:00"
+}
