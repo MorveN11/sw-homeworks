@@ -1,40 +1,44 @@
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
-namespace University.Logging.Handlers;
-public class ErrorHandler : IActionFilter
-{
-    private readonly ILogger<ErrorHandler> _logger;
 
-    public ErrorHandler(ILogger<ErrorHandler> logger)
-    {
-        _logger = logger;
-    }
+namespace  University.Logging;
 
-    public void OnActionExecuted(ActionExecutedContext context)
+    public class ErrorHandler : IActionFilter
     {
-        if (context.Exception == null)
+        private readonly ILogger<ErrorHandler> _logger;
+        private readonly LogHandler _logHandler;
+
+        public ErrorHandler(ILogger<ErrorHandler> logger, LogHandler logHandler)
         {
-            return;
+            _logger = logger;
+            _logHandler = logHandler;
         }
 
-        var exception = (context.Exception is AbstractException)
-            ? context.Exception as AbstractException
-            : new CriticalException(context.Exception);
-
-        exception?.LogMessage();
-
-        _logger.LogError(exception, exception.FriedlyMessage);
-
-        context.Result = new ObjectResult(exception)
+        public void OnActionExecuted(ActionExecutedContext context)
         {
-            Value = exception?.FriedlyMessage
-        };
-        context.ExceptionHandled = true;
-    }
+            if (context == null)
+            {
+                return;
+            }
 
-    public void OnActionExecuting(ActionExecutingContext context)
-    {
+            if (context.Exception != null)
+            {
+                var exception = (context.Exception is AbstractException)
+                    ? context.Exception as AbstractException
+                    : new CriticalException(context.Exception, _logHandler);
+
+                exception?.LogMessage();
+
+                context.Result = new ObjectResult(exception)
+                {
+                    Value = exception?.FriendlyMessage
+                };
+                context.ExceptionHandled = true;
+            }
+        }
+
+        public void OnActionExecuting(ActionExecutingContext context)
+        {
+        }
     }
-}

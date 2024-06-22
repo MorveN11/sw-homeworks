@@ -6,6 +6,7 @@ using University.Business.Dtos;
 using University.Business.Mediators;
 using University.Business.Students;
 using University.Domain;
+using University.Business.Wrappers;
 
 namespace University.API;
 
@@ -28,7 +29,7 @@ public class CareerController:ControllerBase
         var careerRes = _mapper.Map<Pagination<Career>, Pagination<CareerDto>>(result);
         return Ok(careerRes);
    }
-     
+
    [HttpGet("{careerId}")]
    public async Task<IActionResult> GetCareerById([Required]Guid careerId)
    {
@@ -45,14 +46,8 @@ public class CareerController:ControllerBase
    [HttpPut(), Route("careers/{careerId}/{studentId}")]
    public async Task<IActionResult> RegisterStudentInCareer([Required] Guid careerId, [Required] Guid studentId)
    {
-       
        var res = await _mediator.Send(new RegisterStudentInCareer(careerId,studentId));
-       var students = _mapper.Map<IList<Student>, IList<StudentDto>>(res);
-       if (!students)
-       {
-           return BadRequest();
-       }
-       return Ok(students);
+       return Ok(res);
    }
 
 
@@ -78,7 +73,7 @@ public class CareerController:ControllerBase
        }
        return Ok(result);
    }
-   
+
    [HttpDelete("{careerId}")]
    public async Task<IActionResult> Delete([Required] Guid careerId)
    {
@@ -89,7 +84,7 @@ public class CareerController:ControllerBase
        }
        return Ok(result);
    }
-   
+
 }
 
 

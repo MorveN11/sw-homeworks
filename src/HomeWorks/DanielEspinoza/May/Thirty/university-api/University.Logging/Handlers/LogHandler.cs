@@ -1,43 +1,35 @@
 using Microsoft.Extensions.Logging;
 
-namespace University.Logging.Handlers;
-public class LogHandler
-{
-    private readonly ILogger _logger;
-    private static LogHandler instance;
+namespace University.Logging;
 
-    public static LogHandler Instance => instance ?? (instance = new LogHandler());
-
-    private LogHandler()
+    public class LogHandler
     {
-        ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
-        {
-            builder.AddConsole();
-            builder.AddDebug();  
-        });
+        private readonly ILogger<LogHandler> _logger;
 
-        _logger = loggerFactory.CreateLogger<LogHandler>();
-    }
-
-    public void Log(Severity severity, string message)
-    {
-        switch (severity)
+        public LogHandler(ILogger<LogHandler> logger)
         {
-            case Severity.DEBUG:
-                _logger.LogDebug(message);
-                break;
-            case Severity.INFO:
-                _logger.LogInformation(message);
-                break;
-            case Severity.WARNING:
-                _logger.LogWarning(message);
-                break;
-            case Severity.ERROR:
-                _logger.LogError(message);
-                break;
-            case Severity.FATAL:
-                _logger.LogCritical(message);
-                break;
+            _logger = logger;
+        }
+
+        public void Log(Severity severity, string message)
+        {
+            switch (severity)
+            {
+                case Severity.DEBUG:
+                    _logger.LogDebug(message);
+                    break;
+                case Severity.INFO:
+                    _logger.LogInformation(message);
+                    break;
+                case Severity.WARNING:
+                    _logger.LogWarning(message);
+                    break;
+                case Severity.ERROR:
+                    _logger.LogError(message);
+                    break;
+                case Severity.FATAL:
+                    _logger.LogCritical(message);
+                    break;
+            }
         }
     }
-}

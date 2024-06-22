@@ -1,19 +1,25 @@
-namespace University.Logging.Handlers;
+namespace  University.Logging;
 public class CriticalException : AbstractException
 {
-    public CriticalException(Exception exception) 
-    : base(exception, "Something wrong happened. Please contact your system administrator", Severity.ERROR)
-    {
-    }
+       private readonly LogHandler _logHandler;
 
-    public override void LogMessage()
-    {
-        var current = InnerException;
-        do
+        public CriticalException(Exception exception, LogHandler logHandler) :
+            base(exception, "Something wrong happened. Please contact to our system administratoraaaaa", Severity.ERROR)
         {
-           LogHandler.Instance.Log(Severity, current.Message);
-           LogHandler.Instance.Log(Severity, current.StackTrace);
-           current = current.InnerException; 
-        } while (current != null);
-    }
+            _logHandler = logHandler;
+        }
+
+        public override void LogMessage()
+        {
+            var current = InnerException;
+            do
+            {
+                if (current == null)
+                {
+                    continue;
+                }
+                _logHandler.Log(Severity, current.Message);
+                current = current.InnerException;
+            } while (current != null);
+        }
 }

@@ -1,13 +1,13 @@
-namespace University.Logging.Handlers;
+namespace University.Logging;
 public abstract class AbstractException : Exception
 {
-    public new Exception InnerException { get; protected set; }
-    public string FriedlyMessage { get; protected set; }
+    public new Exception? InnerException { get; protected set; }
+    public string FriendlyMessage { get; protected set; }
     public Severity Severity { get; protected set; }
 
     public AbstractException(string friendlyMessage, Severity severity)
     {
-        FriedlyMessage = friendlyMessage;
+        FriendlyMessage = friendlyMessage;
         Severity = severity;
     }
 

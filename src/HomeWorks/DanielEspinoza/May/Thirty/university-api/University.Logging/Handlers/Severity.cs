@@ -1,4 +1,4 @@
-namespace University.Logging.Handlers;
+namespace University.Logging;
 public enum Severity
 {
     DEBUG,

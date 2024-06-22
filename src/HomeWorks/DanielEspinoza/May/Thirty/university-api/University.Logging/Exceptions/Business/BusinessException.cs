@@ -1,12 +1,16 @@
-namespace University.Logging.Handlers;
-public class BusinessException : AbstractException
-{
-    public BusinessException(string message) : base(message, Severity.WARNING)
+namespace University.Logging;
+    public class BusinessException : AbstractException
     {
-    }
+        private readonly LogHandler _logHandler;
 
-    public override void LogMessage()
-    {
-        LogHandler.Instance.Log(Severity, FriedlyMessage);
+        public BusinessException(string message, LogHandler logHandler)
+            : base(message, Severity.WARNING)
+        {
+            _logHandler = logHandler;
+        }
+
+        public override void LogMessage()
+        {
+            _logHandler.Log(Severity, FriendlyMessage);
+        }
     }
-}
