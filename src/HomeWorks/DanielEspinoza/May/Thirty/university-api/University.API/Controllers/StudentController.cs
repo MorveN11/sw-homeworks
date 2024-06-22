@@ -7,6 +7,7 @@ using University.Business.Mediators;
 using University.Business.Students;
 using University.Domain;
 using University.Business.Wrappers;
+using University.Business.Validators;
 namespace University.API;
 
 [ApiController]
@@ -17,11 +18,13 @@ public class StudentController : ControllerBase
     private readonly IMediator _mediator;
 
     private readonly IMapper _mapper;
+    private readonly StudentDtoValidator _validator;
 
-    public StudentController(IMediator mediator, IMapper mapper)
+    public StudentController(IMediator mediator, IMapper mapper, StudentDtoValidator validator)
     {
         _mediator = mediator;
         _mapper = mapper;
+        _validator = validator;
     }
 
 
@@ -29,7 +32,7 @@ public class StudentController : ControllerBase
     public async Task<IActionResult> GetStudentsByPage([Required] int pageNumber, [Required] int pageSize)
     {
         var result = await _mediator.Send(new GetByPage<Student>(pageNumber, pageSize));
-        
+
         var estudentRes = _mapper.Map<Pagination<Student>, Pagination<StudentDto>>(result);
         return Ok(estudentRes);
     }
@@ -61,7 +64,7 @@ public class StudentController : ControllerBase
         }
         var careers = _mapper.Map<IEnumerable<Career>, IEnumerable<CareerDto>>(result);
         return Ok(careers);
-    
+
 
     }
 
@@ -69,6 +72,11 @@ public class StudentController : ControllerBase
     [HttpPost("")]
     public async Task<IActionResult> Post([Required] StudentDto studentDto)
     {
+        var res = _validator.Validate(studentDto);
+        if (res.IsValid)
+        {
+            return BadRequest(res.Errors);
+        }
         Student student = _mapper.Map<StudentDto, Student>(studentDto);
         Guid result = await _mediator.Send(new CreateStudent(student));
 
@@ -82,6 +90,11 @@ public class StudentController : ControllerBase
     [HttpPut("")]
     public async Task<IActionResult> Put([Required] StudentDto studentDto)
     {
+        var res = _validator.Validate(studentDto);
+        if (res.IsValid)
+        {
+            return BadRequest(res.Errors);
+        }
         Student student = _mapper.Map<StudentDto, Student>(studentDto);
         var result = await _mediator.Send(new UpdateStudent(student));
 
