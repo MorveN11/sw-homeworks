@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A1C875D-D7CB-4B68-AFFB-0CC41003A039}|CalculatorTDDTesting\\CalculatorTDDTesting.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculatortdd\\calculatortddtesting\\convertertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A1C875D-D7CB-4B68-AFFB-0CC41003A039}|CalculatorTDDTesting\\CalculatorTDDTesting.csproj|solutionrelative:calculatortddtesting\\convertertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE51235-6996-4A5D-9F5C-749F09B13EE3}|CalculatorTDD\\CalculatorTDD.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculatortdd\\calculatortdd\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE51235-6996-4A5D-9F5C-749F09B13EE3}|CalculatorTDD\\CalculatorTDD.csproj|solutionrelative:calculatortdd\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE51235-6996-4A5D-9F5C-749F09B13EE3}|CalculatorTDD\\CalculatorTDD.csproj|c:\\users\\ganda\\university\\software development 5\\homeworks\\sw-homeworks\\src\\homeworks\\denisgandarillas\\jun\\calculatortdd\\calculatortdd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE51235-6996-4A5D-9F5C-749F09B13EE3}|CalculatorTDD\\CalculatorTDD.csproj|solutionrelative:calculatortdd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConverterTest.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDDTesting\\ConverterTest.cs",
+              "RelativeDocumentMoniker": "CalculatorTDDTesting\\ConverterTest.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDDTesting\\ConverterTest.cs",
+              "RelativeToolTip": "CalculatorTDDTesting\\ConverterTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T00:11:42.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Converter.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDD\\Converter.cs",
+              "RelativeDocumentMoniker": "CalculatorTDD\\Converter.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDD\\Converter.cs",
+              "RelativeToolTip": "CalculatorTDD\\Converter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T00:10:48.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDD\\Program.cs",
+              "RelativeDocumentMoniker": "CalculatorTDD\\Program.cs",
+              "ToolTip": "C:\\Users\\ganda\\UNIVERSITY\\SOFTWARE DEVELOPMENT 5\\HOMEWORKS\\sw-homeworks\\src\\HomeWorks\\DenisGandarillas\\Jun\\CalculatorTDD\\CalculatorTDD\\Program.cs",
+              "RelativeToolTip": "CalculatorTDD\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:04:25.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
