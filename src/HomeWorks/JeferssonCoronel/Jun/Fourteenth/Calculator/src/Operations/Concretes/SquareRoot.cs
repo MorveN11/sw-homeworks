@@ -2,16 +2,33 @@ using Calculator.Operations.Interfaces;
 
 namespace Calculator.Operations.Concretes;
 
-public class SquareRoot : ISingleOperandOperation
+public class SquareRoot : IOperation, IUnaryOperation
 {
-    public string GetSymbol()
+    private double _operand;
+    private readonly IList<double> _operands;
+
+    public SquareRoot()
     {
-        return "√";
+        _operand = 0;
+        _operands = new List<double> {_operand};
     }
 
-    public double Operate(double a)
+    public double ExecuteOperation()
     {
-        if (a < 0) throw new ArgumentException("Cannot take square root of a negative number.");
-        return Math.Sqrt(a);
+        if (_operand < 0) throw new ArgumentException("Cannot take square root of a negative number");
+        var result = Math.Sqrt(_operand);
+        return result;
+    }
+
+    public IList<double> GetOperands()
+    {
+        return _operands;
+    }
+
+    public void SetOperand(double operand)
+    {
+        _operand = operand;
+        
+        _operands[0] = operand;
     }
 }

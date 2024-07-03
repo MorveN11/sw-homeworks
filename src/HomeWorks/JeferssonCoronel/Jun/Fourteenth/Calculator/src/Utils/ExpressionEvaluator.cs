@@ -2,15 +2,8 @@ using System.Text;
 
 namespace Calculator.Utils;
 
-public class StringEvaluator
+public class ExpressionEvaluator
 {
-    
-    public string? GetOperation()
-    {
-        var operation = Console.ReadLine();
-        return operation;
-    }
-    
     public bool IsACorrectOperation(string operation)
     {
         for (var i = 0; i < operation.Length; i++)

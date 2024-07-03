@@ -2,5 +2,6 @@ namespace Calculator.Operations.Interfaces;
 
 public interface IOperation
 {
-    string GetSymbol();
+    double ExecuteOperation();
+    IList<double> GetOperands();
 }
