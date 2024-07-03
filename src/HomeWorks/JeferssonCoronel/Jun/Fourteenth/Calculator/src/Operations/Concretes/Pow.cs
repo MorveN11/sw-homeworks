@@ -2,17 +2,36 @@ using Calculator.Operations.Interfaces;
 
 namespace Calculator.Operations.Concretes;
 
-public class Pow : IMoreThanOneOperandOperation
+public class Pow : IOperation, IBinaryOperation
 {
-    public string GetSymbol()
+    private double _operand1;
+    private double _operand2;
+    private readonly IList<double> _operands;
+
+    public Pow()
     {
-        return "^";
+        _operand1 = 0;
+        _operand2 = 0;
+        _operands = new List<double> {_operand1, _operand2};
+    }
+    
+    public double ExecuteOperation()
+    {
+        var result = Math.Pow(_operand1, _operand2);
+        return result;
     }
 
-    public double Operate(double a, double b, params double[] others)
+    public IList<double> GetOperands()
     {
-        var result = Math.Pow(a, b);
-        foreach (var num in others) result = Math.Pow(result, num);
-        return result;
+        return _operands;
+    }
+
+    public void SetOperands(double operand1, double operand2)
+    {
+        _operand1 = operand1;
+        _operand2 = operand2;
+
+        _operands[0] = _operand1;
+        _operands[1] = _operand2;
     }
 }

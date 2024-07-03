@@ -1,0 +1,20 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=926d3401_002De91a_002D4502_002D934d_002Dca977eb9b6d0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="VerifyThanASingleOperationIsExecutedTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.AdditionTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.DivisionTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.MultiplicationTest.VerifyThatYouCanGetOperandsFromSumOperation&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.MultiplicationTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.PowTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.SubtractionTest.VerifyThatSumOperationIsPerformedWithOperands&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.SubtractionTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Operations.SquareRootTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.ExpressionEvaluatorTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.OperationEnumTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.ExpressionProcessingTest.VerifyThatReturnsTrueForValidOperation&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.ExpressionProcessingTest.VerifyThatReturnsCorrectOperandsForValidOperation&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.ExpressionProcessingTest.VerifyThatReturnsCorrectOperatorsForValidOperation&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.Utils.ExpressionProcessingTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::533A1197-CE82-42DB-A2CD-6C81CAF82F9C::net8.0::Test.CalculatorTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

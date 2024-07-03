@@ -6,53 +6,75 @@ namespace Calculator;
 
 public class Calculator : ICalculator
 {
-    private readonly Dictionary<Operation, IMoreThanOneOperandOperation> _operations;
-    private readonly Dictionary<Operation, ISingleOperandOperation> _singleOperandOperations;
-
+    private readonly Dictionary<Operation, IBinaryOperation> _binaryOperations;
+    private readonly Dictionary<Operation, IUnaryOperation> _unaryOperations;
+    private readonly ExpressionEvaluator _expressionEvaluator;
+    private readonly ExpressionProcessing _expressionProcessing;
+    
     public Calculator()
     {
-        _operations = new Dictionary<Operation, IMoreThanOneOperandOperation>();
-        _singleOperandOperations = new Dictionary<Operation, ISingleOperandOperation>();
+        _binaryOperations = new Dictionary<Operation, IBinaryOperation>();
+        _unaryOperations = new Dictionary<Operation, IUnaryOperation>();
+        _expressionEvaluator = new ExpressionEvaluator();
+        _expressionProcessing = new ExpressionProcessing();
         
-        _operations.Add(Operation.Add, new Addition());
-        _operations.Add(Operation.Subtraction, new Subtraction());
-        _operations.Add(Operation.Multiplication, new Multiplication());
-        _operations.Add(Operation.Division, new Division());
-        _operations.Add(Operation.Pow, new Pow());
-        
-        _singleOperandOperations.Add(Operation.SquareRoot, new SquareRoot());
+        _binaryOperations.Add(Operation.Add, new Addition());
+        _binaryOperations.Add(Operation.Subtraction, new Subtraction());
+        _binaryOperations.Add(Operation.Multiplication, new Multiplication());
+        _binaryOperations.Add(Operation.Division, new Division());
+        _binaryOperations.Add(Operation.Pow, new Pow());
+
+        _unaryOperations.Add(Operation.SquareRoot, new SquareRoot());
     }
-    
-    public void RegisterOperation(Operation operation, IOperation iOperation)
+
+    public void RegisterOperation(Operation op, IBinaryOperation operation)
     {
-        if (_singleOperandOperations.ContainsKey(operation) && _operations.ContainsKey(operation)) return;
-        switch (iOperation)
+        if (_binaryOperations.ContainsKey(op)) return;
+        _binaryOperations.Add(op, operation);
+    }
+
+    public void RegisterOperation(Operation op, IUnaryOperation operation)
+    {
+        if (_unaryOperations.ContainsKey(op)) return;
+        _unaryOperations.Add(op, operation);
+    }
+
+    public double PerformOperation(Operation operationName, double value1, double value2)
+    {
+        if (!_binaryOperations.TryGetValue(operationName, out var op))
+            throw new InvalidOperationException("Operation not found.");
+
+        op.SetOperands(value1, value2);
+        var operation = (IOperation)op;
+
+        return operation.ExecuteOperation();
+    }
+
+    public double PerformOperation(Operation operationName, double value)
+    {
+        if (!_unaryOperations.TryGetValue(operationName, out var op))
+            throw new InvalidOperationException("Operation not found.");
+
+        op.SetOperand(value);
+        var operation = (IOperation)op;
+
+        return operation.ExecuteOperation();
+    }
+
+    public double PerformExpressionCalculation(string expression)
+    {
+        if (!_expressionEvaluator.IsACorrectOperation(expression)) return 0;
+
+        var evaluatedExpression = _expressionEvaluator.GetEvaluatedExpression(expression);
+        var (operators, operands) = _expressionProcessing.GetOperationsDividedInOperatorsAndOperands(
+            evaluatedExpression);
+
+        double result = operands[0];
+
+        for (var i = 0; i < operators.Count; i++)
         {
-            case ISingleOperandOperation singleOperation:
-                _singleOperandOperations.Add(operation, singleOperation);
-                break;
-            case IMoreThanOneOperandOperation operandOperation:
-                _operations.Add(operation, operandOperation);
-                break;
-        }
-
-    }
-
-    public double PerformOperation(Operation op, double value1, double value2, params double[] numbers)
-    {
-        if (!_operations.TryGetValue(op, out var operation))
-            throw new InvalidOperationException("Operation not found.");
-
-        var result = operation.Operate(value1, value2, numbers);
-        return result;
-    }
-
-    public double PerformOperation(Operation op, double value)
-    {
-        if (!_singleOperandOperations.TryGetValue(op, out var operation))
-            throw new InvalidOperationException("Operation not found.");
-
-        var result = operation.Operate(value);
-        return result;
+            if (i + 1 >= operands.Count) throw new InvalidOperationException("Mismatch between operators and operands.");
+            result = PerformOperation(operators[i], result, operands[i + 1]);
+        } return result;
     }
 }

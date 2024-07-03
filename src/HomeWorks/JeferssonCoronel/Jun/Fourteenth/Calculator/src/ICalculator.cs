@@ -5,8 +5,9 @@ namespace Calculator;
 
 public interface ICalculator
 {
-    public void RegisterOperation(Operation op, IOperation operation);
-    public double PerformOperation(Operation op, double value1, double value2, params double[] numbers);
+    public void RegisterOperation(Operation op, IBinaryOperation operation);
+    public void RegisterOperation(Operation op, IUnaryOperation operation);
+    public double PerformOperation(Operation op, double value1, double value2);
     public double PerformOperation(Operation op, double value);
 
 }

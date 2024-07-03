@@ -7,4 +7,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="xunit.assert">
+        <HintPath>..\..\..\.nuget\packages\xunit.assert\2.5.3\lib\netstandard1.1\xunit.assert.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
