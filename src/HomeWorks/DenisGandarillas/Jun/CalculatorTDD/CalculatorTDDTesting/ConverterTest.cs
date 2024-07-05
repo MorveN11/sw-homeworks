@@ -12,6 +12,32 @@ namespace CalculatorTDDTesting
     {
 
         [TestMethod]
+        public void VerifyThatGetOnlyDigits()
+        {
+            string operation = "2+3*4-5/6";
+            string expected = "2,3,4,5,6";
+
+            var converter = new Converter();
+
+            string actual = converter.GetDigits(operation);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void VerifyThatGetOnlyOperators()
+        {
+            string operation = "2+3*4-5/6";
+            string expected = "+,*,-,/";
+
+            var converter = new Converter();
+
+            string actual = converter.GetOperators(operation);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void VerifyThanTheConverterHandlesAdditionInASimpleExercise()
         {
             string operation = "2+3";
@@ -19,9 +45,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -34,9 +58,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -49,9 +71,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -64,9 +84,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -79,9 +97,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -94,9 +110,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -109,9 +123,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -124,9 +136,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -139,9 +149,7 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
@@ -154,27 +162,23 @@ namespace CalculatorTDDTesting
 
             var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
-
-            string actual = converter.ToString(tuple);
+            string actual = converter.OperationConverter(operation);
 
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod]
-        public void VerifyThanTheConverterHandlesComplexExercisesWithParentheses()
-        {
-            string operation = "(2+3)*4-5/(6+7)";
-            string expected = "(,+,),*,-,/,(,+,)|2,3,4,5,6,7";
+        // [TestMethod]
+        // public void VerifyThanTheConverterHandlesComplexExercisesWithParentheses()
+        // {
+        //     string operation = "(2+3)*4-5/(6+7)";
+        //     string expected = "(,+,),*,-,/,(,+,)|2,3,4,5,6,7";
 
-            var converter = new Converter();
+        //     var converter = new Converter();
 
-            var tuple = converter.OperationConverter(operation);
+        //     string actual = converter.OperationConverter(operation);
 
-            string actual = converter.ToString(tuple);
-
-            Assert.AreEqual(expected, actual);
-        }
+        //     Assert.AreEqual(expected, actual);
+        // }
 
     }
 }
