@@ -12,6 +12,7 @@ public class ExpressionParsingTest
     {
         _parser = new ExpressionParser();
     }
+
     [Fact]
     public void ParseAdditionExpression()
     {
@@ -25,7 +26,19 @@ public class ExpressionParsingTest
     }
 
 
-      [Fact]
+    [Fact]
+    public void ParseMultiplicationExpression()
+    {
+        // Arrange
+        string expression = "*&-7,89";
+
+        // Act
+        IExpression expressionTree = _parser.Parse(expression);
+        // Assert
+        Assert.Equal("-7 * 89", expressionTree.ToString());
+    }
+
+    [Fact]
     public void ParseExpressionWithMultiplicationAndAddition()
     {
         // 12+9*4
@@ -51,7 +64,7 @@ public class ExpressionParsingTest
     }
 
 
-        [Fact]
+    [Fact]
     public void ParseExpressionWithExponentAndMod()
     {
         // Arrange
@@ -63,15 +76,16 @@ public class ExpressionParsingTest
         Assert.Equal("9 % 4 ^ 12", expressionTree.ToString());
     }
     [Fact]
-    public void ParseExpressionWithAllOperators(){
+    public void ParseExpressionWithAllOperators()
+    {
 
         // Arrange
-        string expression = "/**++&9,4,12,9,123";
+        string expression = "/**+&9,4,12,9,123";
 
         // Act
         IExpression expressionTree = _parser.Parse(expression);
         // Assert
-        Assert.Equal("9 * 4 / 12 + 9 + 123", expressionTree.ToString());
+        Assert.Equal("9 / 4 * 12 * 9 + 123", expressionTree.ToString());
     }
 
 }

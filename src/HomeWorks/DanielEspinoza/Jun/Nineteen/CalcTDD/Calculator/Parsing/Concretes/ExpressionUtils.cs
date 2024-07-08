@@ -51,10 +51,8 @@ public class ExpressionUtils
 
     public static string NormalizeExpression(string expression)
     {
-        // Remove all spaces
-        string normalized = expression.Replace(" ", "");
+        string normalized = NormalizeSubstractions(expression.Replace(" ", ""));
 
-        // Handle multiple unary operators and correct their sequence
         normalized = normalized.Replace("--", "+")
                                .Replace("-+", "+-")
                                .Replace("++", "+")
@@ -62,8 +60,13 @@ public class ExpressionUtils
                                .Replace("*+-", "*-")
                                .Replace("%+-", "%-")
                                .Replace("^+-", "^-");
-
         return normalized;
+    }
+
+    public static string NormalizeSubstractions(string expression){
+        string pattern = @"(\d+)-(\d+)";
+        string replacement = "$1+-$2";
+        return Regex.Replace(expression, pattern, replacement);
     }
 
 

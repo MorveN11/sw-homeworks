@@ -6,7 +6,7 @@ namespace Calculator.Tests.Parsing;
 public class ExtractingExpressionComponentsTest
 {
     [Fact]
-    public void ExtractOperatorsValidExpression()
+    public void ExtractValidOperatorsExpression()
     {
         // Arrange
         string expression = "2+3*4/5+-6^2";
@@ -19,7 +19,7 @@ public class ExtractingExpressionComponentsTest
     }
 
     [Fact]
-    public void ExtractOperatorsNoOperators()
+    public void ExtractOperatorsFromStringWithoutOperators()
     {
         // Arrange
         string expression = "123";
@@ -45,20 +45,34 @@ public class ExtractingExpressionComponentsTest
     }
 
     [Fact]
-    public void ExtractNumbersValidExpression()
+    public void ExtractOperatorsFromAnInvalidExpression()
+    {
+
+        // Arrange
+        string expression = "2+3&4/5?-6¿2";
+        string[] expected = ["+", "/"];
+        // Act
+        string[] actual = ExpressionUtils.ExtractOperators(expression);
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void ExtractNumbersFromValidExpression()
     {
         // Arrange
-        string expression = "2+3*4/5-6^2";
+        string expression = "2+3-4/5^6*2";
+        string[] expected = ["2", "3", "-4", "5", "6", "2"];
 
         // Act
         string[] numbers = ExpressionUtils.ExtractNumbers(expression);
 
         // Assert
-        Assert.Equal(new string[] { "2", "3", "4", "5", "-6", "2" }, numbers);
+        Assert.Equal(expected, numbers);
     }
 
     [Fact]
-    public void ExtractNumbersNoNumbers()
+    public void ExtractingFromStringWithoutNumbers()
     {
         // Arrange
         string expression = "+-*/^";

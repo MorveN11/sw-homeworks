@@ -131,8 +131,8 @@ namespace Calculator.Tests.Processing
         public void EvaluateMultipleOperations()
         {
             // Arrange
-            string expr = "2+3*4-2^5";
-            double expected = -256;
+            string expr = "2-23-2+3*2^5%9";
+            double expected = -8;
 
             // Act
             double actual = _expressionProcessor.ProcessExpression(expr);

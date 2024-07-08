@@ -1,5 +1,3 @@
-using System.Data;
-
 namespace Calculator.Parsing;
 
 public class ExpressionFormatter : IFormatter
@@ -30,12 +28,7 @@ public class ExpressionFormatter : IFormatter
 
         List<string> tempOperators = [.. operators];
         List<string> tempNumbers = [.. numbers];
-        int formatIndex = 0;
-
-         // 2 + 3 * 4
-        // 2,3,4
-        // +,*
-
+        int formatIndex = 0, operatorIndex = 0;
 
         foreach (var op in ExpressionUtils.GetOperators())
         {
@@ -43,17 +36,28 @@ public class ExpressionFormatter : IFormatter
             {
                 int index = tempOperators.IndexOf(op);
 
-                numbers[formatIndex] = tempNumbers[index];
-                numbers[formatIndex+1] = tempNumbers[index+1];
-                operators[formatIndex] = tempOperators[index].ToString();
+                operators[operatorIndex++] = tempOperators[index].ToString();
+                if (tempNumbers[index] == string.Empty){
+                    formatIndex--;
+                }else{
+                    numbers[formatIndex] = tempNumbers[index];
+                }
+                tempNumbers[index] = string.Empty;
 
-                tempNumbers.RemoveAt(index);
-                tempOperators.RemoveAt(index);
-                formatIndex++;
+
+
+                if (index < tempNumbers.Count - 1 && tempNumbers[index + 1] != string.Empty)
+                {
+                    numbers[++formatIndex] = tempNumbers[index + 1];
+                    tempNumbers[index+1] = string.Empty;
+                }
+
+
+                tempOperators[index] = string.Empty;
+                 ++formatIndex;
             }
         }
 
-        numbers[formatIndex] = tempNumbers[0];
 
         return string.Join("", operators) + separator + string.Join(termSeparator, numbers);
     }
