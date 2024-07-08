@@ -326,8 +326,8 @@ public class ExpressionFormattingTest
     public void FormatExpressionWithFourOperators()
     {
         // Arrange
-        string expression = "6  % 2 ^ 4 / 3+5";
-        string expected = "%^/+&6,2,4,3,5";
+        string expression = "6  ^ 2 % 4 / 3+5";
+        string expected = "^%/+&6,2,4,3,5";
 
         // Act
         string actual = _formatter.Format(expression);
@@ -342,8 +342,8 @@ public class ExpressionFormattingTest
     public void FormatExpressionWithFiveOperators()
     {
         // Arrange
-        string expression = "6  % 2 ^ 4 / 3*  16+ 5";
-        string expected = "%^/*+&6,2,4,3,16,5";
+        string expression = "6  ^ 2 % 4 / 3*  16+ 5";
+        string expected = "^%/*+&6,2,4,3,16,5";
 
         // Act
         string actual = _formatter.Format(expression);
@@ -357,8 +357,8 @@ public class ExpressionFormattingTest
     public void FormatExpressionWithSixOperators()
     {
         // Arrange
-        string expression = "6  % 2 ^ 4 / 3*178+5 -    8";
-        string expected = "%^/*++&6,2,4,3,178,5,-8";
+        string expression = "6  ^ 2 % 4 / 3*178+5 -    8";
+        string expected = "^%/*++&6,2,4,3,178,5,-8";
 
         // Act
         string actual = _formatter.Format(expression);
@@ -419,8 +419,8 @@ public class ExpressionFormattingTest
     public void FormatExpressionWithFiveOperatorsAndAGreaterOperationAtTheEnd()
     {
         // Arrange
-        string expression = "4+6*2/4^3%5";
-        string expected = "%^/*+&3,5,4,2,6,4";
+        string expression = "4+6*2/4%3^5";
+        string expected = "^%/*+&3,5,4,2,6,4";
 
         // Act
         string actual = _formatter.Format(expression);
@@ -433,8 +433,8 @@ public class ExpressionFormattingTest
     public void FormatExpressionWithSixOperatorsAndAGreaterOperationAtTheEnd()
     {
         // Arrange
-        string expression = "12-4+6*2/4^3%5";
-        string expected = "%^/*++&3,5,4,2,6,12,-4";
+        string expression = "12-4+6*2/4%3^5";
+        string expected = "^%/*++&3,5,4,2,6,12,-4";
 
         // Act
         string actual = _formatter.Format(expression);

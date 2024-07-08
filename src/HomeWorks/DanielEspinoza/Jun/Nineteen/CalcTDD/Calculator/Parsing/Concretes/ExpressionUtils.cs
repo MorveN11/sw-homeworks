@@ -21,7 +21,7 @@ public class ExpressionUtils
 
     public static string[] GetOperators()
     {
-        return ["%", "^", "/", "*", "+"];
+        return ["^","%", "/", "*", "+"];
     }
 
     public static int GetPrecedence(char c)
@@ -65,8 +65,17 @@ public class ExpressionUtils
 
     public static string NormalizeSubstractions(string expression){
         string pattern = @"(\d+)-(\d+)";
+
         string replacement = "$1+-$2";
-        return Regex.Replace(expression, pattern, replacement);
+
+        string result;
+        do
+        {
+            result = expression;
+            expression = Regex.Replace(expression, pattern, replacement);
+        } while (result != expression);
+
+        return expression;
     }
 
 

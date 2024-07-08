@@ -9,11 +9,11 @@ namespace Calculator.Example
         {
             IFormatter formatter = new ExpressionFormatter();
 
-            string formattedExpression = formatter.Format("2+4/8%3^2");
+            string formattedExpression = formatter.Format("2^5%7*3+2-2-23");
 
             System.Console.WriteLine(formattedExpression);
 
-             IParser ps = new ExpressionParser();
+            IParser ps = new ExpressionParser();
             IExpression expressionTree = ps.Parse(formattedExpression);
 
             System.Console.WriteLine(expressionTree.ToString());
@@ -21,3 +21,4 @@ namespace Calculator.Example
         }
     }
 }
+

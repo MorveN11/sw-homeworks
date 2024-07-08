@@ -19,6 +19,8 @@ public class ExpressionProcessor : IExpressionProcessor
     {
         string formattedExpression = _formatter.Format(expression);
         IExpression expressionTree = _parser.Parse(formattedExpression);
-        return expressionTree.Evaluate();
+        double result  = expressionTree.Evaluate();
+
+        return Math.Round(result,2);
     }
 }
