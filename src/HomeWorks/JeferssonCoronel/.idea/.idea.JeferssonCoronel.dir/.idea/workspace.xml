@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcc7ef90-b02f-474c-b61d-466a26aff241" name="Changes" comment="" />
+    <list default="true" id="bcc7ef90-b02f-474c-b61d-466a26aff241" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JeferssonCoronel.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JeferssonCoronel.dir/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +16,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/src/Calculator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/src/Utils/ExpressionEvaluator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/src/Utils/ExpressionProcessing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/src/Utils/Operation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Jun/Fourteenth/Calculator/src/Utils/OperationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/May/Fourth/Strategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/May/Fourth/Template.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/May/Nineth/AbstractFactoryDesignPattern/AbstractFactory.cs" root0="SKIP_HIGHLIGHTING" />
@@ -38,7 +46,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/CalculatorWithTDDVersion2__03-07-24&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/jeferssonlv/RiderProjects/PracticeInClass2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -90,6 +98,7 @@
       <workItem from="1717166047921" duration="34000" />
       <workItem from="1718169930115" duration="185000" />
       <workItem from="1718214072875" duration="416000" />
+      <workItem from="1720574760245" duration="1287000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Adding project using template Design Pattern">
       <option name="closed" value="true" />
@@ -131,6 +140,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: Adding project using template Design Pattern" />

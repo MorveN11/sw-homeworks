@@ -1,0 +1,23 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b15480f9_002Ddbd5_002D4f7c_002Dadb2_002D2fef8ba2b804/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AdditionTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.AdditionTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.DivisionTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.MultiplicationTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.SquareRootTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.TranslateTests.OperationFactoryTests.CreateOperation_ValidOperation_ReturnsCorrectExecutor&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.TranslateTests.OperationFactoryTests.CreateOperation_InvalidOperation_ThrowsInvalidOperationException&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.TranslateTests.TranslateMultipleOperationsTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.TranslateTests.TranslatorTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.RootTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationsTest.SubtractionTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.CalculatorTest.VerifyPerformOperationThrowsException&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.CalculatorTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.UtilsTest.ExpressionEvaluatorTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.UtilsTest.ExpressionProcessingTests&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.UtilsTest.MyOperationExtensionsTest.VerifyGetSymbolForAddition&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.UtilsTest.MyOperationExtensionsTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.LogicProgramTest.OperationTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::52D59A5A-441E-4FC1-889F-0C13969319AE::net8.0::Test.OperationTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
