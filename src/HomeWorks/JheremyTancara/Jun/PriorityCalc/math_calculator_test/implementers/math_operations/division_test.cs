@@ -24,7 +24,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 3;
@@ -47,7 +51,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 3;
@@ -70,7 +78,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 1;
@@ -80,7 +92,7 @@ namespace TestCalcDivision
             // Validate results
             Assert.AreEqual(expected_result, actual_result);
         }
-        
+
         [TestMethod]
         public void TestDivisionWithOneDecimalsNegative()
         {
@@ -93,7 +105,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 1;
@@ -116,7 +132,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 2;
@@ -139,7 +159,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 2;
@@ -148,8 +172,8 @@ namespace TestCalcDivision
 
             // Validate results
             Assert.AreEqual(expected_result, actual_result);
-        }    
- 
+        }
+
          [TestMethod]
         public void TestDivisionWithThreeDecimalsPositive()
         {
@@ -159,10 +183,14 @@ namespace TestCalcDivision
             double expected_result = 1.667;
 
             var validation = new Mock<IValidation>();
-            validation
+             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 2;
@@ -185,7 +213,11 @@ namespace TestCalcDivision
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 2;
@@ -194,7 +226,7 @@ namespace TestCalcDivision
 
             // Validate results
             Assert.AreEqual(expected_result, actual_result);
-        }    
+        }
 
         [TestMethod]
         public void TestValidateDivisionByZero()
@@ -206,15 +238,19 @@ namespace TestCalcDivision
             var validation = new Mock<IValidation>();
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
-                .Returns(false);
-            
+                .Returns(true);
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = 3;
 
             // Validate results
             Assert.ThrowsException<DivideByZeroException>(() => calc.Operation(number_one, number_two, decimalPlaces));
-        }   
+        }
 
         [TestMethod]
         public void TestArgumentOutOfRangeException()
@@ -226,14 +262,18 @@ namespace TestCalcDivision
             var validation = new Mock<IValidation>();
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
-                .Returns(false);
-            
+                .Returns(true);
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Division(validation.Object);
             decimalPlaces = -2;
 
             // Validate results
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => calc.Operation(number_one, number_two, decimalPlaces));
-        }   
+        }
     }
 }

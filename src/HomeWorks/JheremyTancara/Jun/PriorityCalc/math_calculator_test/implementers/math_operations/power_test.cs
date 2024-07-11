@@ -24,7 +24,11 @@ namespace TestCalcPower
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Power(validation.Object);
             decimalPlaces = 0;
@@ -47,7 +51,11 @@ namespace TestCalcPower
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Power(validation.Object);
             decimalPlaces = 0;
@@ -70,7 +78,11 @@ namespace TestCalcPower
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
                 .Returns(true);
-            
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Power(validation.Object);
             decimalPlaces = 0;
@@ -91,14 +103,18 @@ namespace TestCalcPower
             var validation = new Mock<IValidation>();
             validation
                 .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
-                .Returns(false);
-            
+                .Returns(true);
+
+            validation
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Power(validation.Object);
             decimalPlaces = -2;
 
             // Validate results
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => calc.Operation(number_one, number_two, decimalPlaces));
-        }  
+        }
     }
 }

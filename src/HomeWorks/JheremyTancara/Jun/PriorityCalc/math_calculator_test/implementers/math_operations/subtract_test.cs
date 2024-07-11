@@ -22,9 +22,9 @@ namespace TestCalcSubtract
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Subtract(validation.Object);
             decimalPlaces = 3;
@@ -45,9 +45,9 @@ namespace TestCalcSubtract
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Subtract(validation.Object);
             decimalPlaces = 3;
@@ -68,9 +68,9 @@ namespace TestCalcSubtract
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Subtract(validation.Object);
             decimalPlaces = 3;
@@ -91,9 +91,9 @@ namespace TestCalcSubtract
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Subtract(validation.Object);
             decimalPlaces = 3;

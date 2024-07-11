@@ -22,9 +22,9 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = 0;
@@ -45,9 +45,9 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = 0;
@@ -68,9 +68,9 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = 3;
@@ -91,9 +91,9 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = 3;
@@ -114,9 +114,9 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
                 .Returns(true);
-            
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = 3;
@@ -136,15 +136,15 @@ namespace TestCalculatorMultiplication
 
             var validation = new Mock<IValidation>();
             validation
-                .Setup(x => x.ValidateDivisionByZero(It.IsAny<double>()))
-                .Returns(false);
-            
+                .Setup(x => x.ValidateNonNegative(It.IsAny<double>()))
+                .Returns(true);
+
             // Execute operations
             ICalculator calc = new Multiplication(validation.Object);
             decimalPlaces = -2;
 
             // Validate results
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => calc.Operation(number_one, number_two, decimalPlaces));
-        }   
+        }
     }
 }
