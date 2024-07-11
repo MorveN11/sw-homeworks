@@ -67,7 +67,7 @@ class Program
         CareerName = careerGroup.Key,
         Count = careerGroup.Count()
       }).ToList();
-
+    
     Console.WriteLine("2. Lista de carreras con mas de 10 estudiantes aplazados");
     foreach (var s in response2)
     {
