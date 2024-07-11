@@ -1,61 +1,90 @@
-using System.Data;
-
-namespace Calculator.Parsing;
-
-public class ExpressionFormatter : IFormatter
+namespace Calculator.Parsing
 {
-    private readonly char separator = '&';
-    private readonly char termSeparator = ',';
-
-
-
-    public string Format(string expression)
+    public class ExpressionFormatter : IFormatter
     {
-        if (string.IsNullOrEmpty(expression))
+        private readonly char separator = '&';
+        private readonly char termSeparator = ',';
+
+        private readonly INormalizer _normalizer;
+
+        public ExpressionFormatter(INormalizer normalizer)
         {
-            return string.Empty;
+            _normalizer = normalizer;
         }
 
-        expression = ExpressionUtils.NormalizeExpression(expression);
-
-        string[] numbers = ExpressionUtils.ExtractNumbers(expression);
-        string[] operators = ExpressionUtils.ExtractOperators(expression);
-
-        return FormatExpression(operators, numbers);
-    }
-
-
-    private string FormatExpression(string[] operators, string[] numbers)
-    {
-
-        List<string> tempOperators = [.. operators];
-        List<string> tempNumbers = [.. numbers];
-        int formatIndex = 0;
-
-         // 2 + 3 * 4
-        // 2,3,4
-        // +,*
-
-
-        foreach (var op in ExpressionUtils.GetOperators())
+        public string Format(string expression)
         {
-            while (tempOperators.Contains(op))
+            if (string.IsNullOrEmpty(expression))
             {
-                int index = tempOperators.IndexOf(op);
+                return string.Empty;
+            }
 
-                numbers[formatIndex] = tempNumbers[index];
-                numbers[formatIndex+1] = tempNumbers[index+1];
-                operators[formatIndex] = tempOperators[index].ToString();
+            expression = _normalizer.Normalize(expression);
 
-                tempNumbers.RemoveAt(index);
-                tempOperators.RemoveAt(index);
-                formatIndex++;
+            string[] numbers = ExpressionUtils.ExtractNumbers(expression);
+            string[] operators = ExpressionUtils.ExtractOperators(expression);
+
+            return FormatExpression(operators, numbers);
+        }
+
+        private string FormatExpression(string[] operators, string[] numbers)
+        {
+            var expressionData = new ExpressionData(operators, numbers);
+
+            foreach (var op in ExpressionUtils.GetOperators())
+            {
+                FormatExpressionByOperator(op, expressionData);
+            }
+
+            return string.Join("", expressionData.Operators) + separator + string.Join(termSeparator, expressionData.Numbers);
+        }
+
+        private void FormatExpressionByOperator(string op, ExpressionData data)
+        {
+            while (data.TempOperators.Contains(op))
+            {
+                int index = data.TempOperators.IndexOf(op);
+
+                data.Operators[data.OperatorIndex++] = data.TempOperators[index].ToString();
+                if (data.TempNumbers[index] == string.Empty)
+                {
+                    data.FormatIndex--;
+                }
+                else
+                {
+                    data.Numbers[data.FormatIndex] = data.TempNumbers[index];
+                }
+                data.TempNumbers[index] = string.Empty;
+
+                if (index < data.TempNumbers.Count - 1 && data.TempNumbers[index + 1] != string.Empty)
+                {
+                    data.Numbers[++data.FormatIndex] = data.TempNumbers[index + 1];
+                    data.TempNumbers[index + 1] = string.Empty;
+                }
+
+                data.TempOperators[index] = string.Empty;
+                ++data.FormatIndex;
             }
         }
 
-        numbers[formatIndex] = tempNumbers[0];
+        private class ExpressionData
+        {
+            public string[] Operators { get; }
+            public string[] Numbers { get; }
+            public List<string> TempOperators { get; }
+            public List<string> TempNumbers { get; }
+            public int FormatIndex { get; set; }
+            public int OperatorIndex { get; set; }
 
-        return string.Join("", operators) + separator + string.Join(termSeparator, numbers);
+            public ExpressionData(string[] operators, string[] numbers)
+            {
+                Operators = operators;
+                Numbers = numbers;
+                TempOperators = new List<string>(operators);
+                TempNumbers = new List<string>(numbers);
+                FormatIndex = 0;
+                OperatorIndex = 0;
+            }
+        }
     }
-
 }

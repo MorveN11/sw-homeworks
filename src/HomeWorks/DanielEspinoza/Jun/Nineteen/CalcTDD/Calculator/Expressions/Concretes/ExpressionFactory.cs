@@ -15,7 +15,7 @@ public class ExpressionFactory
             "/" => new Division(left, right),
             "^" => new Exponentiation(left, right),
             "%" => new Mod(left, right),
-            _ => new Number(0)
+            _ => throw new InvalidOperationException()
         };
     }
 
