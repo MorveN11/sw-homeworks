@@ -1,15 +1,14 @@
 namespace CalculatorTDD
 {
-    public class Division : IOperationWithTwoParams
+    public class Division : Operation
     {
-        public int Execute(int firstNumber, int secondNumber)
+        public override double Execute(double numberOne, double numberTwo)
         {
-            return firstNumber / secondNumber;
-        }
-
-        public char GetOperator()
-        {
-            return '/';
+            if (numberTwo is 0)
+            {
+                throw new DivideByZeroException("Cannot divide by zero :c");
+            }
+            return numberOne / numberTwo;
         }
     }
 }
