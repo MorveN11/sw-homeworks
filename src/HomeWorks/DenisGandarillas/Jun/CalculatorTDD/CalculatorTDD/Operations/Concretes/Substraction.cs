@@ -1,17 +1,10 @@
 namespace CalculatorTDD
 {
-
-    public class Substraction : IOperationWithTwoParams
+    public class Substraction : Operation
     {
-        public int Execute(int firstNumber, int secondNumber)
+        public override double Execute(double numberOne, double numberTwo)
         {
-            return firstNumber - secondNumber;
-        }
-
-        public char GetOperator()
-        {
-            return '-';
+            return numberOne - numberTwo;
         }
     }
-
 }

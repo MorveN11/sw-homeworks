@@ -1,17 +1,10 @@
 namespace CalculatorTDD
 {
-
-    public class Multiplication : IOperationWithTwoParams
+    public class Multiplication : Operation
     {
-        public int Execute(int firstNumber, int secondNumber)
+        public override double Execute(double numberOne, double numberTwo)
         {
-            return firstNumber * secondNumber;
-        }
-
-        public char GetOperator()
-        {
-            return '*';
+            return numberOne * numberTwo;
         }
     }
-
 }

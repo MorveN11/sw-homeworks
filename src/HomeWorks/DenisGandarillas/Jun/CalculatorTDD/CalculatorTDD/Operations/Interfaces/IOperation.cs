@@ -3,7 +3,7 @@ namespace CalculatorTDD
 
     public interface IOperation
     {
-        char GetOperator();
+        double Execute(double numberOne, double numberTwo);
     }
 
 }
