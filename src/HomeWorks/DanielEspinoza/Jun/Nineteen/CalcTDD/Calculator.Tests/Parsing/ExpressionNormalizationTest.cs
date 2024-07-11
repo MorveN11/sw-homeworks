@@ -5,6 +5,14 @@ namespace Calculator.Tests.Parsing;
 
 public class ExpressionNormalizationTest
 {
+
+    public readonly INormalizer _normalizer;
+
+    public ExpressionNormalizationTest()
+    {
+        _normalizer = new ExpressionNormalizer();
+    }
+
     [Fact]
     public void NormalizeExpressionRemoveSpaces()
     {
@@ -12,7 +20,7 @@ public class ExpressionNormalizationTest
         string expression = "2 + 3 - 4 * 5 / 6";
 
         // Act
-        string normalized = ExpressionUtils.NormalizeExpression(expression);
+        string normalized = _normalizer.Normalize(expression);
 
         // Assert
         Assert.DoesNotContain(" ", normalized);
@@ -25,7 +33,7 @@ public class ExpressionNormalizationTest
         string expression = "2 -- 3 * -4";
 
         // Act
-        string normalized = ExpressionUtils.NormalizeExpression(expression);
+        string normalized = _normalizer.Normalize(expression);
 
         // Assert
         Assert.Equal("2+3*-4", normalized);
@@ -38,7 +46,7 @@ public class ExpressionNormalizationTest
         string expression = "2 * -3 + 4 / -5";
 
         // Act
-        string normalized = ExpressionUtils.NormalizeExpression(expression);
+        string normalized = _normalizer.Normalize(expression);
 
         // Assert
         Assert.Equal("2*-3+4/-5", normalized);
@@ -51,7 +59,7 @@ public class ExpressionNormalizationTest
         string expression = "-2 + --3 * 4 / -5";
 
         // Act
-        string normalized = ExpressionUtils.NormalizeExpression(expression);
+        string normalized = _normalizer.Normalize(expression);
 
         // Assert
         Assert.Equal("-2+3*4/-5", normalized);

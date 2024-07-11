@@ -1,6 +1,6 @@
 using Calculator.Processing;
 using Calculator.Parsing;
-using Xunit;
+
 
 namespace Calculator.Tests.Processing
 {
@@ -11,8 +11,9 @@ namespace Calculator.Tests.Processing
         public ExpressionProcessorTest()
         {
             IParser parser = new ExpressionParser();
-            IFormatter formatter = new ExpressionFormatter();
-            _expressionProcessor = new ExpressionProcessor(formatter, parser);
+            IFormatter formatter = new ExpressionFormatter(new ExpressionNormalizer());
+            IValidator validator = new ExpressionValidator();
+            _expressionProcessor = new ExpressionProcessor(formatter, parser, validator);
         }
 
         [Fact]
@@ -186,7 +187,8 @@ namespace Calculator.Tests.Processing
         }
 
         [Fact]
-        public void EvaluateSequenceOfAdditionsAndSubstractions(){
+        public void EvaluateSequenceOfAdditionsAndSubstractions()
+        {
 
             // Arrange
             string expr = "2+2-2-2+2";
@@ -231,7 +233,8 @@ namespace Calculator.Tests.Processing
 
 
         [Fact]
-        public void EvaluateSequenceOfDivisionsAndMultiplications(){
+        public void EvaluateSequenceOfDivisionsAndMultiplications()
+        {
 
             // Arrange
             string expr = "92/9/2*2";
@@ -246,7 +249,8 @@ namespace Calculator.Tests.Processing
 
 
         [Fact]
-        public void EvaluateSequenceOfExponentiations(){
+        public void EvaluateSequenceOfExponentiations()
+        {
             // Arrange
             string expr = "2^2^2";
             double expected = 16;
@@ -257,13 +261,14 @@ namespace Calculator.Tests.Processing
 
             // Assert
 
-            Assert.Equal(expected,actual);
+            Assert.Equal(expected, actual);
         }
 
 
 
         [Fact]
-        public void EvaluateSequenceOfModulus(){
+        public void EvaluateSequenceOfModulus()
+        {
 
             // Arrange
             string expr = "5%6%12";
@@ -282,7 +287,8 @@ namespace Calculator.Tests.Processing
 
 
         [Fact]
-        public void EvaluateSequenceOfModulusAndExponentiation(){
+        public void EvaluateSequenceOfModulusAndExponentiation()
+        {
 
             // Arrange
             string expr = "4^3^2%2%5";

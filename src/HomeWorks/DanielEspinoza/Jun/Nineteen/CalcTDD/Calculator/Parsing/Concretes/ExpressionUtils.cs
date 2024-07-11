@@ -1,6 +1,4 @@
-
-using System.Collections.Immutable;
-using System.Net;
+using Calculator.Exceptions;
 using System.Text.RegularExpressions;
 
 namespace Calculator.Parsing;
@@ -24,6 +22,7 @@ public class ExpressionUtils
         return ["^","%", "/", "*", "+"];
     }
 
+
     public static int GetPrecedence(char c)
     {
         if (Precedence.ContainsKey(c))
@@ -40,42 +39,6 @@ public class ExpressionUtils
     public static bool IsOperator(char c)
     {
         return c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == '%';
-    }
-
-    public static bool IsValidExpression(string expression)
-    {
-        string pattern = @"^\s*-?\d+(\s*[-+*/]\s*-?\d+)*\s*$";
-        Regex regex = new(pattern);
-        return regex.IsMatch(expression);
-    }
-
-    public static string NormalizeExpression(string expression)
-    {
-        string normalized = NormalizeSubstractions(expression.Replace(" ", ""));
-
-        normalized = normalized.Replace("--", "+")
-                               .Replace("-+", "+-")
-                               .Replace("++", "+")
-                               .Replace("/+-", "/-")
-                               .Replace("*+-", "*-")
-                               .Replace("%+-", "%-")
-                               .Replace("^+-", "^-");
-        return normalized;
-    }
-
-    public static string NormalizeSubstractions(string expression){
-        string pattern = @"(\d+)-(\d+)";
-
-        string replacement = "$1+-$2";
-
-        string result;
-        do
-        {
-            result = expression;
-            expression = Regex.Replace(expression, pattern, replacement);
-        } while (result != expression);
-
-        return expression;
     }
 
 
@@ -97,6 +60,7 @@ public class ExpressionUtils
         return operators;
     }
 
+
     public static string[] ExtractNumbers(string expression)
     {
         string pattern = @"(-?\d+)";
@@ -112,21 +76,5 @@ public class ExpressionUtils
 
         return numbers;
     }
-
 }
 
-[Serializable]
-internal class InvalidOperatorException : Exception
-{
-    public InvalidOperatorException()
-    {
-    }
-
-    public InvalidOperatorException(string? message) : base(message)
-    {
-    }
-
-    public InvalidOperatorException(string? message, Exception? innerException) : base(message, innerException)
-    {
-    }
-}

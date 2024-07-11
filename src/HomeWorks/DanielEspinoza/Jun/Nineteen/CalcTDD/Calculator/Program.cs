@@ -1,5 +1,6 @@
 ﻿using Calculator.Expressions;
 using Calculator.Parsing;
+using Calculator.Processing;
 
 namespace Calculator.Example
 {
@@ -7,17 +8,23 @@ namespace Calculator.Example
     {
         public static void Main()
         {
-            IFormatter formatter = new ExpressionFormatter();
 
-            string formattedExpression = formatter.Format("2^5%7*3+2-2-23");
 
-            System.Console.WriteLine(formattedExpression);
+            ExpressionValidator validator = new();
+            ExpressionParser parser = new();
+            ExpressionNormalizer normalizer = new();
+            ExpressionFormatter formatter = new(normalizer);
 
-            IParser ps = new ExpressionParser();
-            IExpression expressionTree = ps.Parse(formattedExpression);
-
-            System.Console.WriteLine(expressionTree.ToString());
-            System.Console.WriteLine(expressionTree.Evaluate());
+            ExpressionProcessor processor = new(formatter, parser, validator);
+            string? input = Console.ReadLine();
+            if (input != null)
+            {
+                Console.WriteLine(processor.ProcessExpression(input));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
         }
     }
 }
